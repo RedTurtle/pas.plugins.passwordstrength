@@ -3,7 +3,10 @@ from AccessControl.class_init import InitializeClass
 from OFS.Cache import Cacheable
 from pas.plugins.passwordstrength import _
 from plone import api
-from plone.base.utils import safe_text
+try:
+    from plone.base.utils import safe_text
+except ImportError:
+    from Products.CMFPlone.utils import safe_unicode
 from Products.PluggableAuthService.interfaces.plugins import IValidationPlugin
 
 # from pas.plugins.passwordstrength import logger
