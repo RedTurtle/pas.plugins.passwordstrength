@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0a3 (unreleased)
+
+
+- Nothing changed yet.
+
+
 ## 1.0.0a2 (2024-01-12)
 
 
