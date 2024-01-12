@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0a2 (unreleased)
+## 1.0.0a2 (2024-01-12)
 
 
 - Skip validation for temporary password generated for reset. [mamico]
