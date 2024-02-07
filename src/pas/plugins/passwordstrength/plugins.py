@@ -6,7 +6,7 @@ from plone import api
 try:
     from plone.base.utils import safe_text
 except ImportError:
-    from Products.CMFPlone.utils import safe_unicode
+    from Products.CMFPlone.utils import safe_unicode as safe_text
 from Products.PluggableAuthService.interfaces.plugins import IValidationPlugin
 
 # from pas.plugins.passwordstrength import logger
