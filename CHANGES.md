@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0a3 (unreleased)
+## 1.0.0a3 (2024-05-20)
 
 
 - Fix Plone 5/ Plone 6 compatibility
