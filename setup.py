@@ -15,7 +15,7 @@ long_description = "\n\n".join(
 
 setup(
     name="pas.plugins.passwordstrength",
-    version="1.0.0a3",
+    version="1.0.0a4.dev0",
     description="Adds verification rules for user passwords in plone.",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
