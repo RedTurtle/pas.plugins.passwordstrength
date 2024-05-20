@@ -3,7 +3,8 @@
 ## 1.0.0a3 (unreleased)
 
 
-- Nothing changed yet.
+- Fix Plone 5/ Plone 6 compatibility
+  [mamico]
 
 
 ## 1.0.0a2 (2024-01-12)
