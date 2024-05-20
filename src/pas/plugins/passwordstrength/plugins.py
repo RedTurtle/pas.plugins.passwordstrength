@@ -1,15 +1,14 @@
 from AccessControl import ClassSecurityInfo
 from AccessControl.class_init import InitializeClass
-from OFS.Cache import Cacheable
 from pas.plugins.passwordstrength import _
 from plone import api
-
 
 try:
     from plone.base.utils import safe_text
 except ImportError:
     from Products.CMFPlone.utils import safe_unicode as safe_text
 
+from Products.PluggableAuthService.interfaces.plugins import IChallengePlugin
 from Products.PluggableAuthService.interfaces.plugins import IValidationPlugin
 
 # from pas.plugins.passwordstrength import logger
@@ -53,7 +52,7 @@ DEFAULT_POLICIES = [
 ]
 
 
-class PasswordStrength(BasePlugin, Cacheable):
+class PasswordStrength(BasePlugin):
     """PAS plugin that ensures strong passwords"""
 
     meta_type = "Password Strength Plugin"
@@ -177,7 +176,18 @@ class PasswordStrength(BasePlugin, Cacheable):
             errors = [{"id": "password", "error": e} for e in errors]
         return errors
 
+    security.declarePrivate("challenge")
+    def challenge(self, request, response):
+        """Challenge a user to password reset."""
+        # TODO: use marker interface on request to check if this is a password reset request
+        if response.getHeader("Location") and "/passwordreset/" in response.getHeader(
+            "Location"
+        ):
+            pas = self._getPAS()
+            pas.resetCredentials(request, response)
+            return True
 
-classImplements(PasswordStrength, IValidationPlugin)
+
+classImplements(PasswordStrength, IValidationPlugin, IChallengePlugin)
 
 InitializeClass(PasswordStrength)
