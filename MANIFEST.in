@@ -10,6 +10,9 @@ recursive-include tests *.py
 recursive-include tests *.gitkeep
 recursive-include tests *.json
 recursive-include tests *.yml
+recursive-include news *.gitkeep
+recursive-include news *.internal
+recursive-include news *.jinja
 # --
 include *.yml
 include base.cfg

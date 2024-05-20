@@ -7,11 +7,11 @@
 
 [![PyPI - Plone Versions](https://img.shields.io/pypi/frameworkversions/plone/pas.plugins.passwordstrength)](https://pypi.org/project/pas.plugins.passwordstrength/)
 
-[![Meta](https://github.com/mamico/pas.plugins.passwordstrength/actions/workflows/meta.yml/badge.svg)](https://github.com/mamico/pas.plugins.passwordstrength/actions/workflows/meta.yml)
+[![Meta](https://github.com/RedTurtle/pas.plugins.passwordstrength/actions/workflows/meta.yml/badge.svg)](https://github.com/RedTurtle/pas.plugins.passwordstrength/actions/workflows/meta.yml)
 ![Code Style](https://img.shields.io/badge/Code%20Style-Black-000000)
 
-[![GitHub contributors](https://img.shields.io/github/contributors/mamico/pas.plugins.passwordstrength)](https://github.com/mamico/pas.plugins.passwordstrength)
-[![GitHub Repo stars](https://img.shields.io/github/stars/mamico/pas.plugins.passwordstrength?style=social)](https://github.com/mamico/pas.plugins.passwordstrength)
+[![GitHub contributors](https://img.shields.io/github/contributors/RedTurtle/pas.plugins.passwordstrength)](https://github.com/RedTurtle/pas.plugins.passwordstrength)
+[![GitHub Repo stars](https://img.shields.io/github/stars/RedTurtle/pas.plugins.passwordstrength?style=social)](https://github.com/RedTurtle/pas.plugins.passwordstrength)
 
 # pas.plugins.passwordstrength
 
@@ -73,9 +73,9 @@ Put your name here, you deserve it!
 ## Contribute
 
 -   Issue Tracker:
-    <https://github.com/mamico/pas.plugins.passwordstrength/issues>
+    <https://github.com/RedTurtle/pas.plugins.passwordstrength/issues>
 -   Source Code:
-    <https://github.com/mamico/pas.plugins.passwordstrength>
+    <https://github.com/RedTurtle/pas.plugins.passwordstrength>
 -   Documentation: <https://docs.plone.org/foo/bar>
 
 ## Support

@@ -1,5 +1,5 @@
 # Generated from:
-# https://github.com/plone/meta/tree/master/config/default
+# https://github.com/plone/meta/tree/main/config/default
 # See the inline comments on how to expand/tweak this configuration file
 [build-system]
 requires = ["setuptools>=68.2"]
@@ -11,7 +11,6 @@ start_string = "<!-- towncrier release notes start -->\n"
 title_format = "## {version} ({project_date})"
 template = "news/.changelog_template.jinja"
 underlines = ["", "", ""]
-issue_format = "[#{issue}](https://github.com/collective/pas.plugins.passwordstrength/issues/{issue})"
 
 [[tool.towncrier.type]]
 directory = "breaking"
@@ -74,8 +73,8 @@ target-version = ["py38"]
 ##
 
 [tool.codespell]
-ignore-words-list = "discreet,vew"
-skip = "*.po,*.min.js,*.pot,*.po,*.yaml,*.json"
+ignore-words-list = "discreet,"
+skip = "*.po,"
 ##
 # Add extra configuration options in .meta.toml:
 #  [pyproject]
@@ -122,8 +121,6 @@ Zope = [
   'Products.CMFCore', 'Products.CMFDynamicViewFTI',
 ]
 python-dateutil = ['dateutil']
-ignore-packages = ['plone.restapi', 'plone.volto', 'zestreleaser.towncrier', 'zest.releaser', 'pytest', 'pytest-cov', 'pytest-plone', 'pytest-docker', 'pytest-vcr', 'pytest-mock', 'gocept.pytestlayer', 'requests-mock', 'vcrpy']
-Plone = ['Products.CMFPlone', 'Products.CMFCore', 'Products.GenericSetup', 'Products.PluggableAuthService', 'Products.PlonePAS']
 
 ##
 # Add extra configuration options in .meta.toml:
@@ -138,16 +135,15 @@ Plone = ['Products.CMFPlone', 'Products.CMFCore', 'Products.GenericSetup', 'Prod
 [tool.check-manifest]
 ignore = [
     ".editorconfig",
+    ".flake8",
     ".meta.toml",
     ".pre-commit-config.yaml",
-    "tox.ini",
-    ".flake8",
+    "dependabot.yml",
     "mx.ini",
-    "news/*",
-    "constraints-mxdev.txt",
-    "requirements-mxdev.txt",
+    "tox.ini",
 
 ]
+
 ##
 # Add extra configuration options in .meta.toml:
 #  [pyproject]
@@ -155,14 +151,13 @@ ignore = [
 #      "*.map.js",
 #      "*.pyc",
 #  """
+#  check_manifest_extra_lines = """
+#  ignore-bad-ideas = [
+#      "some/test/file/PKG-INFO",
+#  ]
+#  """
 ##
 
-[tool.coverage.run]
-omit = ["*/locales/*"]
-
-[tool.bandit]
-targets = "src"
-exclude_dirs = ["tests", "src/pas/plugins/passwordstrength/locales"]
 
 ##
 # Add extra configuration options in .meta.toml:
