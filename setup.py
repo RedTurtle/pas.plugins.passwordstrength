@@ -53,7 +53,6 @@ setup(
     install_requires=[
         "setuptools",
         "Zope",
-        "plone.base",
         "Products.CMFPlone",
         "Products.PluggableAuthService",
         "Products.GenericSetup",
